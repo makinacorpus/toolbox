@@ -119,12 +119,12 @@
             var map;
             function load(pae_data) {
                 map = new L.Map('map');
-                var cloudmade = new L.TileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
-                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://cloudmade.com">CloudMade</a>',
+                var mc_tiles = new L.TileLayer('http://{s}.livembtiles.makina-corpus.net/makina/osmlight-france/{z}/{x}/{y}.png', {
+                    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://makina-corpus.com">Makina Corpus</a>',
                     maxZoom: 18
                 });
                 var center = new L.LatLng(43.605, 3.88);
-                map.setView(center, 13).addLayer(cloudmade);
+                map.setView(center, 13).addLayer(mc_tiles);
 
                 
                 var style = {
